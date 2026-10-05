@@ -73,7 +73,9 @@ impl App {
     }
 
     fn decrement_counter(&mut self) {
-        self.counter -= 1;
+        if self.counter > 0 {
+            self.counter -= 1;
+        }
     }
 }
 // ANCHOR_END: impl App
